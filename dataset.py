@@ -10,7 +10,7 @@ IMG_ROOT = './dataset/images/Images'
 ANN_ROOT = './dataset/annotations/Annotation'
 
 # 读取所有类别
-CLASSES = sorted(os.listdir(IMG_ROOT))
+CLASSES = sorted(os.listdir(IMG_ROOT))[:30]  # 只保留前10个类别
 CLASS_TO_IDX = {cls: idx for idx, cls in enumerate(CLASSES)}
 
 # 解析xml获取类别名
